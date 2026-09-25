@@ -1,0 +1,7 @@
+round,frame_id,object,action,rule_or_reason
+1,frame_0099.jpg,"xe giữa khung, phía trái",edited,"AI vẽ box quá hẹp và lệch khỏi thân xe; chỉnh lại ôm sát thân xe để khớp hướng và tỷ lệ đúng theo guideline về box ôm thân xe và không giữ box sai do confidence cao."
+1,frame_0182.jpg,"hai xe sát nhau ở phía giữa và phải",edited,"Model gộp 2 xe đứng gần nhau thành 1 box; tách thành 2 box riêng theo guideline 'Hai xe đứng sát nhau -> vẽ hai box riêng, không gộp làm một'."
+1,frame_0326.jpg,"xe mép phải, nằm ở vùng xa và bị cắt khung",added,"AI bỏ sót xe ở mép phải; thân xe rõ ràng và phần nằm trong ảnh vẫn đủ để label, theo quy tắc 'Xe bị cắt ở mép ảnh -> chỉ vẽ box cho phần nằm trong ảnh'."
+1,frame_0331.jpg,"ánh phản xạ/đèn sáng trên mặt đường",deleted,"Box model là đèn phản chiếu và nguồn sáng, không phải thân xe; theo guideline, 'Ánh đèn phản chiếu trên mặt đường, biển báo phát sáng, đèn đường -> Không gán nhãn'."
+1,frame_0369.jpg,"xe ở góc trái xa và rõ thân xe",accepted,"AI phát hiện đúng vị trí và kích thước box gần khớp thân xe, nên giữ nguyên theo rule 'không sửa khi box đủ rõ và phù hợp'."
+1,frame_0392.jpg,"xe ở giữa khung, phía trái",accepted,"Box AI khớp với thân xe và không có sai lệch rõ ràng; giữ nguyên để tránh làm nhiễu mô hình theo nguyên tắc nhất quán khi box đã đủ chuẩn."
